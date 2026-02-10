@@ -1,0 +1,123 @@
+/*1. VARIABLES & PALETA DE COLORES*/
+.root {
+    /* Colores Base */
+    -color-fondo-base: #121212;
+    -color-fondo-iconos: #1E1E1E;
+    -color-fondo-paneles: #2D2D2D;
+    /* Acentos */
+    -color-acento-accion: #4CAF50; /* Verde */
+    -color-acento-alerta: #F44336; /* Rojo */
+    /* Texto */
+    -color-texto-principal: #FFFFFF;
+    -color-texto-secundario: #B0B0B0;
+    /* Elementos Claros */
+    -color-elementos-claros: #E0E0E0;
+    /* Espaciado (Base 8px) */
+    -espacio-xs: 4px;
+    -espacio-s: 8px;
+    -espacio-m: 16px;
+    -espacio-l: 24px;
+    -espacio-xl: 32px;
+}
+/*2. ESTILOS GLOBALES*/
+.root {
+    -fx-background-color: -color-fondo-base;
+    -fx-font-family: 'Inter', 'Roboto', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-texto-principal;
+}
+/* Scrollbar Personalizado (Opcional para dark mode) */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb {
+    -fx-background-color: -color-fondo-paneles;
+    -fx-background-radius: 4px;
+}
+
+/*3. NAVEGACIÓN*/
+/* Header */
+.header-link {
+    -fx-text-fill: -color-texto-principal;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 2 0; /* Solo borde inferior */
+}
+.header-link:hover {
+    -fx-text-fill: -color-acento-accion;
+}
+/* Barra Lateral */
+.sidebar {
+    -fx-background-color: transparent;
+    -fx-padding: -espacio-l;
+}
+.sidebar-item {
+    -fx-text-fill: -color-texto-secundario;
+    -fx-padding: -espacio-s -espacio-m;
+    -fx-cursor: hand;
+}
+/*4. TARJETAS DE JUEGO*/
+/* Estilo Base Tarjeta */
+.card {
+    -fx-background-color: -color-fondo-paneles;
+    -fx-background-radius: 8px; /* Radio suave */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
+/* Vista Rejilla */
+.card-grid-image-container {
+    -fx-alignment: center;
+}
+.card-grid-title {
+    -fx-background-color: rgba(0, 0, 0, 0.8); /* Franja negra semitransparente */
+    -fx-padding: -espacio-s;
+    -fx-text-fill: -color-texto-principal;
+    -fx-font-weight: bold;
+}
+/* Vista Lista */
+.card-list {
+    -fx-padding: -espacio-m;
+    -fx-spacing: -espacio-m;
+}
+.card-list-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.card-list-category {
+    -fx-text-fill: -color-texto-secundario;
+    -fx-font-size: 12px;
+}
+/*5. BOTONES Y CONTROLES*/
+/* Botón Reservar */
+.button-primary {
+    -fx-background-color: -color-acento-accion;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: -espacio-s -espacio-m;
+    -fx-cursor: hand;
+}
+/* Filtros*/
+.filter-button {
+    -fx-background-color: -color-elementos-claros;
+    -fx-text-fill: black;
+    -fx-background-radius: 20px;
+    -fx-padding: -espacio-xs -espacio-m;
+    -fx-cursor: hand;
+}
+/* Botón Quitar (Icono X) */
+.button-remove {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+.button-remove .icon {
+    -fx-fill: -color-acento-alerta;
+}
+/*6. PAGINACIÓN*/
+.pagination-label {
+    -fx-text-fill: -color-texto-principal;
+    -fx-font-size: 18px;
+    -fx-font-family: 'Monospaced', 'Courier New';
+}
