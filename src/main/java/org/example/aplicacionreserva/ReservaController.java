@@ -3,7 +3,7 @@ package org.example.aplicacionreserva;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class ReservaController {
     @FXML
     private Label welcomeText;
 
