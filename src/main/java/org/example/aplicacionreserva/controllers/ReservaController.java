@@ -1,4 +1,4 @@
-package org.example.aplicacionreserva;
+package org.example.aplicacionreserva.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
